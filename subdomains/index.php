@@ -130,7 +130,7 @@ $subdomainNames = array_values($subdomainNames);
                             <?php if (!empty($subdomainNames)): ?>
                                 <?php foreach ($subdomainNames as $subdomain): ?>
                                     <li>
-                                        <a href="https://<?php echo htmlspecialchars($subdomain); ?>" target="_blank">
+                                        <a href="https://<?php echo htmlspecialchars($subdomain); ?>.dpip.lol" target="_blank">
                                             <?php echo htmlspecialchars($subdomain); ?>
                                         </a>
                                     </li>
@@ -173,7 +173,7 @@ $subdomainNames = array_values($subdomainNames);
                 <h3 class="footer__title">Some information</h3>
                 <ul class="footer__links">
                     <li>
-                        <p>V 1.0 '/subdomains'</p>
+                        <p>V 1.1 '/subdomains'</p>
                     </li>
                     <li>
                         <a href="mailto:douxx@douxx.tech" target="_blank" class="footer__link">douxx@douxx.tech</a>
