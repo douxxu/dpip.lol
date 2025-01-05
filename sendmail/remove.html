@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed Example</title>
+</head>
+<style>
+    /*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3rem;
+    --black-color: hsl(206, 4%, 4%);
+    --black-color-alt: hsl(206, 4%, 8%);
+    --title-color: hsl(206, 4%, 95%);
+    --text-color: hsl(206, 4%, 75%);
+    --white-color: #FFF;
+    --body-color: hsl(206, 4%, 6%);
+    --container-color: hsl(206, 4%, 10%);
+    --body-font: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--body-font);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+a {
+  color: var(--text-color-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: lighten(var(--text-color-light), 15%);
+  text-decoration: underline;
+}
+
+/*=============== EMBED STYLES ===============*/
+.embed {
+    background-color: var(--container-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+.embed__header {
+    background-color: var(--black-color);
+    padding: 1rem;
+    text-align: center;
+    zoom: 200%;
+}
+
+.embed__logo {
+    max-width: 100px;
+}
+
+.embed__content {
+    padding: 1.5rem;
+}
+
+.embed__title {
+    font-size: 1.5rem;
+    color: var(--title-color);
+    margin-bottom: 0.5rem;
+}
+
+.embed__description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.embed__button {
+    display: inline-block;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.embed__button:hover {
+    background-color: var(--black-color-alt);
+}
+
+</style>
+<body>
+    <div class="embed">
+        <header class="embed__header">
+            <img src="https://images.dpip.lol/big_logo.png" alt="Logo" class="embed__logo">
+        </header>
+        <div class="embed__content">
+            <h1 class="embed__title">Subdomain deleted !</h1>
+            <p class="embed__description">A subdomain has been deleted on dpip.lol ! 
+            <br>Subdomain: VALU£.dpip.lol
+            </p>
+            <a href="https://dpip.lol/unsub/?email=£MAIL" class="embed__button">Unsubscribe</a>
+        </div>
+    </div>
+</body>
+</html>
