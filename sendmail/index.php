@@ -48,7 +48,7 @@ while ($row = $result->fetch_assoc()) {
     
     $personalizedHtmlContent = str_replace('£MAIL', $to, $htmlContent);
 
-    $subject = 'DPIP.lol update - Authomatic message';
+    $subject = 'DPIP.lol update - Automatic message';
     $headers = 'Content-Type: text/html; charset=UTF-8' . "\r\n";
 
     if (!mail($to, $subject, $personalizedHtmlContent, $headers)) {
