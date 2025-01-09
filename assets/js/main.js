@@ -86,16 +86,41 @@ sr.reveal(`.case__data`)
 
 /*=============== SUBSCRIBE BUTTON ===============*/
 document.getElementById('subscribeForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Empêche le comportement par défaut du formulaire
+    event.preventDefault();
 
     const emailInput = document.querySelector('.footer__input');
-    const email = emailInput.value.trim(); // Récupère l'email saisi et enlève les espaces
-
-    // Vérifie si l'email n'est pas vide
+    const email = emailInput.value.trim();
     if (email) {
-        // Redirige vers l'URL avec l'email
         window.location.href = `https://dpip.lol/subscribe?email=${encodeURIComponent(email)}`;
     } else {
-        alert('Veuillez entrer un email valide.'); // Alerte si l'email est vide
+        alert('Veuillez entrer un email valide.');
     }
+});
+
+/*=============== HOST INFOS ===============*/
+document.addEventListener("DOMContentLoaded", () => {
+    const apiUrl = "https://proxy.douxx.tech?url=status.dpip.lol/api/getinfos"; //using a proxy to avoid those goofy ahhh cors errors
+
+    const formatMemory = (bytes) => (bytes / (1024 * 1024)).toFixed(2);
+    const roundToTwoDecimals = (value) => Math.round(value * 100) / 100;
+
+    fetch(apiUrl)
+        .then(response => {
+            if (!response.ok) {
+                console.log("Error while getting host data.");
+            }
+            return response.json();
+        })
+        .then(data => {
+            const cpuUsage = roundToTwoDecimals(data.cpu_usage);
+            const cpuElement = document.querySelector(".specs__data:nth-child(1) .specs__subtitle");
+            cpuElement.textContent += ` (${cpuUsage}%)`;
+
+            const { total, used } = data.memory;
+            const ramElement = document.querySelector(".specs__data:nth-child(2) .specs__subtitle");
+            ramElement.textContent = `${formatMemory(used)}MB / ${formatMemory(total)}MB DDR4`;
+        })
+        .catch(error => {
+            console.error("Error while getting host data:", error);
+        });
 });
