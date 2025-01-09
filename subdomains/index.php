@@ -173,16 +173,10 @@ $subdomainNames = array_values($subdomainNames);
                 <h3 class="footer__title">Some information</h3>
                 <ul class="footer__links">
                     <li>
-                        <p>V 1.1 '/subdomains'</p>
+                        <p>V 1.2 '/subdomains'</p>
                     </li>
                     <li>
                         <a href="mailto:douxx@douxx.tech" target="_blank" class="footer__link">douxx@douxx.tech</a>
-                    </li>
-                    <li>
-                        <a href="https://xc.dpip.lol" target="_blank" class="footer__link">some game server</a>
-                    </li>
-                    <li>
-                        <a href="https://rick.dpip.lol" target="_blank" class="footer__link">A rickroll</a>
                     </li>
                 </ul>
             </div>
