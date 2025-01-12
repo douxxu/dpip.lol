@@ -40,3 +40,5 @@ Once done, be sure that php is running on your webserver and you should be ok !
 This project is licensed under the GPL-3.0 license.
 Made by </> Douxx.tech
 
+<img src="https://prv-readme-views.dpip.lol/?id=dpip_lol">
+
